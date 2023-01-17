@@ -1,0 +1,51 @@
+body{
+    height: 100hv;
+    margin: auto;
+    padding: 10px;
+    background-color: lightgray !important;
+}
+:root{
+    --color1:deepskyblue;
+    --color2:yellow;
+}
+.div1{
+    width: 150px;
+    height: 100px;
+    background-color: var(--color1);
+    transition: width 3s linear, height 1s linear;
+    transition-delay: 1s;
+    color: var(--color2);
+    border: 2px solid var(--color2);
+}
+.div1:hover{
+    width: 300px;
+    height: 200px;
+}
+.div2{
+    width: 150px;
+    height: 100px;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: 2px solid var(--color1);
+}
+.div3{
+    width: 150px;
+    height: 100px;
+    background-color: var(--color1);
+    color: var(--color2);
+    border: 2px solid var(--color2);
+
+}
+.div3:hover{
+    transform:rotate3d(1, 1, 1, 45deg)
+}
+@media screen and (max-width:900px) {
+    
+    body{
+        background-color: bisque !important;
+    }
+    .div1{
+        --color1:orange;
+        background-color: var(--color1);
+    }
+}
